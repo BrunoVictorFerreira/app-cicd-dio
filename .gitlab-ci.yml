@@ -26,6 +26,8 @@ deploy_gcp:
 
   script:
     - ssh -o StrictHostKeyChecking=no -i $SSH_KEY gcp@$SSH_SERVER "sudo rm -rf ./app-cicd-dio/"
+    - ls -la
+    - pwd
     - git clone git@gitlab.com:Bruno_victor/app-cicd-dio.git
     - cd app-cicd-dio
     - sudo chmod +x ./script.sh
